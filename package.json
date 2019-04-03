@@ -1,0 +1,26 @@
+{
+    "name": "book-store",
+    "version": "1.0.0",
+    "main": "server.js",
+    "author": "lancely (stvn.lh@gmail.com)",
+    "license": "MIT",
+    "scripts": {
+        "start": "node server",
+        "server": "nodemon server.js",
+        "client": "npm run start --prefix client",
+        "dev": "concurrently \"yarn start\"  \"yarn client\"",
+        "dev-client": "concurrently \"yarn server\"  \"yarn client\""
+    },
+    "dependencies": {
+        "bcrypt": "^3.0.4",
+        "body-parser": "^1.18.3",
+        "connect-mongo": "^2.0.3",
+        "cookie-parser": "^1.4.4",
+        "express": "^4.16.4",
+        "jsonwebtoken": "^8.5.0",
+        "mongoose": "^5.4.19"
+    },
+    "devDependencies": {
+        "concurrently": "^4.1.0"
+    }
+}
